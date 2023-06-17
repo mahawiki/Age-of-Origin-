@@ -21,16 +21,17 @@
 .bg-dark{
     background-color: black !important;
 }
-/* .form-select{
-    background: transparent!important;
-    border: none;
-    color: white;
-} */
-.custom-select {
-    position: relative;
-    display: inline-block;
+
+// .form-select{
+//     width: 220px;
+ 
+//     background: transparent!important;
+//     border: none;
+//     color: #a0a0a0;
+// }
+.custom-select::after {
+    color: black;
   }
-  
   .arrow {
     position: absolute;
     top: 50%;
