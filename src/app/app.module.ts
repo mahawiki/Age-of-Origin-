@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/pages/navbar/navbar.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { PaymentGatewayComponent } from './components/pages/payment-gateway/payment-gateway.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +16,8 @@ import { PaymentGatewayComponent } from './components/pages/payment-gateway/paym
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

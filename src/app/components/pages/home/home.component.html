@@ -12,7 +12,7 @@
                
                     <div class=" checkbox-box">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                          <input type="checkbox" [(ngModel)]="checkboxValue" class="form-check-input" id="flexCheckChecked" checked>
                             <label class="form-check-label" for="flexCheckChecked">
                                 Read and Agree User Agreement
                             </label>
@@ -31,12 +31,14 @@
                         <p class="para-text">Please type in the Commander ID </p>
                     </div>
                     <div class="col-md-7">
-                       <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Please type in the Commander ID">   
+                       <input type="email" class="form-control input-id" id="exampleFormControlInput1" placeholder="Please type in the Commander ID" [disabled]="!checkboxValue">  
+                       <p class="input-id-error" *ngIf="!checkboxValue">Please type in the Commander ID</p> 
                     </div>
+
                     <div class="col-md-3">
-                        <button type="button" class="btn btn-primary">Confirm</button>
+                      <button type="button" [disabled]="!checkboxValue" class="btn btn-primary custom-btn-primary">Confirm</button>
                     </div>
-                </div>
+                </div> 
 
 
 
@@ -46,11 +48,11 @@
                         <p class="para-text d-flex">Amount Options<span><img src="../../../../assets/images/logo.png" alt="logo" ></span> </p>
                     </div>
                     <div class="col-md-9">
-                        <div class="row row-cols-1 row-cols-md-4 g-4 bg-second-row py-3 pb-5">
+                        <div class="row row-cols-1 row-cols-md-4 g-4 bg-second-row py-3 pb-5"  [ngClass]="{'disabled': !checkboxValue}">
 
                             <div class="col">
                                 
-                              <div class="card text-center ">
+                              <div class="card text-center">
                                 <div class="card-body">
                                   <h5 class="card-title">1999</h5>
                                   <p class=""><del> 24.4$</del></p>
@@ -137,10 +139,10 @@
                         <p class="para-text d-flex">Payment Method </p>
                     </div>
                     <div class="col-md-2">
-                        <button class="btn btn-outline-warning  " ><img src="../../../../assets/images/paypal.png" ></button>
+                        <button class="btn btn-outline-warning" [disabled]="!checkboxValue" ><img src="../../../../assets/images/paypal.png" ></button>
                     </div>
                     <div class="center-button">
-                        <button type="button" class="btn btn-warning">Buy Now</button>
+                        <button type="button" class="btn btn-warning" [disabled]="!checkboxValue">Buy Now</button>
                     </div>
                     <div class="text-center text-white mt-5">
                         <p>If you have any questions, please contact the official customer support team:aoz@camel4u.com</p>

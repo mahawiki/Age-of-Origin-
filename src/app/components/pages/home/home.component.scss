@@ -71,6 +71,7 @@ header{
     font-size: 12px;
     padding: 2px 0 2px 4px;
     text-align: left;
+    cursor: pointer;
 }
 
   .center-button {
@@ -86,8 +87,35 @@ header{
         border: 2px solid #4e320f;
     }
 
+    .custom-btn-primary:disabled {
+        cursor: not-allowed !important;
+        opacity: 0.5;
+        background-color:#4e320f !important;
+      }
+      .custom-btn-primary:disabled :hover{
+        cursor: not-allowed !important;
+        background-color:red !important;
 
 
+      }
+      .input-id:disabled{
+        background-color: white !important;
+color: gray;
+      }
+
+      .input-id-error{
+        color: red;
+        font-size: 17px;
+      }
+
+
+      .disabled {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+
+ 
+  
 
 
 
